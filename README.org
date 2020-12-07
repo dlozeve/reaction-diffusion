@@ -1,5 +1,40 @@
 * Reaction-Diffusion Model
 
-Reaction-Diffusion system simulation using the Gray-Scott model, in [[https://www.dyalog.com/][Dyalog APL]].
+[[https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system][Reaction-Diffusion system]] simulation using the Gray-Scott model, in [[https://www.dyalog.com/][Dyalog APL]].
 
 [[img.png]]
+
+** Running
+
+[[https://www.dyalog.com/download-zone.htm][Install Dyalog APL]] and [[https://en.wikipedia.org/wiki/Netpbm][Netpbm]] (~apt-get install netpbm~). Then run
+~make~. This will create the =img.pnm= and =img.png= files in the
+current directory.
+
+The images are generated from APL by creating a [[https://en.wikipedia.org/wiki/Netpbm][Netpbm]] file, which are
+nice because they are just plain-text. It is then converted to PNG
+using ~pnmtopng~.
+
+** Parameters
+
+All the parameters are defined directly in [[grayscott.dyalog]].
+
+The parameters of the model are:
+- ~dt~: the time step,
+- ~da~: the diffusion rate for A,
+- ~db~: the diffusion rate for B,
+- ~f~: the feed rate for A,
+- ~k~: the kill rate for B.
+
+Additionally, you can change ~N~, the size of the grid, and ~steps~,
+the number of time steps to simulate.
+
+Finally, the function ~mat2pbm~ exports to a bitmap (black and white)
+format, while ~mat2pgm~ exports a grayscale image.
+
+** References
+
+[[http://www.karlsims.com/rd.html][This page]] gives a good explanation of the Gray-Scott model. [[https://github.com/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb][This
+notebook]] [[https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb][(Colab)]] gives a nice example of implementation in Python with
+Numpy. For even more details on the model and a classification of
+pattern, see [[http://mrob.com/pub/comp/xmorphia/][this page]].
+
