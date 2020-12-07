@@ -8,13 +8,12 @@
  ⍝ Parameters
  dt da db f k←1.0 0.16 0.08 0.060 0.062
  ⍝ Initialization
- N←200
- A←0.8+0.2×?N N⍴0
- A[((N÷2)-10)+⍳20;((N÷2)-10)+⍳20]←0.5
- B←0.2×?N N⍴0
- B[((N÷2)-10)+⍳20;((N÷2)-10)+⍳20]←0.25
+ N←500
+ A←N N⍴1
+ B←0.1×?N N⍴0
+ B[((N÷2)-10)+⍳20;((N÷2)-10)+⍳20]←1
  ⍝ Run
- steps←10000
+ steps←20000
  Ap Bp←(update⍣steps)A B
  ⍝ ' ⌺'[Ap>0.5]
  ⍝ Export to image file
