@@ -1,10 +1,10 @@
 * Reaction-Diffusion Model
 
-[[https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system][Reaction-Diffusion system]] simulation using the Gray-Scott model, in [[https://www.dyalog.com/][Dyalog APL]].
+[[https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system][Reaction-Diffusion system]] simulation using the Gray-Scott model, in [[https://www.dyalog.com/][Dyalog APL]] and [[https://mlochbaum.github.io/BQN/index.html][BQN]].
 
 [[img.png]]
 
-** Running
+** Running the Dyalog version
 
 [[https://www.dyalog.com/download-zone.htm][Install Dyalog APL]] and [[https://en.wikipedia.org/wiki/Netpbm][Netpbm]] (~apt-get install netpbm~). Then run
 ~make~. This will create the =img.pnm= and =img.png= files in the
@@ -13,6 +13,15 @@ current directory.
 The images are generated from APL by creating a [[https://en.wikipedia.org/wiki/Netpbm][Netpbm]] file, which are
 nice because they are just plain-text. It is then converted to PNG
 using ~pnmtopng~.
+
+** Running the BQN version
+
+Clone [[https://github.com/dlozeve/bqn-graphics][bqn-graphics]] at the same level than this repository. Run the
+=./generate_animation.sh= script. It requires [[https://www.gnu.org/software/parallel/][GNU Parallel]], [[https://en.wikipedia.org/wiki/Netpbm][Netpbm]],
+and ffmpeg.
+
+PNM and PNG images are in the =out= directory, and the animation is in
+=out.mp4=.
 
 ** Parameters
 
