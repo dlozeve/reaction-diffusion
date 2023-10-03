@@ -8,4 +8,4 @@ rm out/step00000.pnm
 # convert all to PNG
 parallel --jobs 8 "pnmtopng {} > {.}.png" ::: out/*.pnm
 # generate video
-ffmpeg -y -framerate 30 -pattern_type glob -i 'out/*.png' -r 30 -vf scale=500:-1 -loop 0 out.mp4
+ffmpeg -y -framerate 30 -pattern_type glob -i 'out/*.png' -r 30 -vf scale=500:-1 out.mp4
