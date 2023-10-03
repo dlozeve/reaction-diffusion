@@ -33,8 +33,8 @@ format, while ~mat2pgm~ exports a grayscale image.
 
 ** References
 
-[[http://www.karlsims.com/rd.html][This page]] gives a good explanation of the Gray-Scott model. [[https://github.com/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb][This
-notebook]] [[https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb][(Colab)]] gives a nice example of implementation in Python with
+[[http://www.karlsims.com/rd.html][This page]] gives a good explanation of the Gray-Scott model. [[https://github.com/EnvModelling/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb][This
+notebook]] gives a nice example of implementation in Python with
 Numpy. For even more details on the model and a classification of
 pattern, see [[http://mrob.com/pub/comp/xmorphia/][this page]].
 
